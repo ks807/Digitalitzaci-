@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Terminal / Perfil</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+
+  <body>
+
+
+<nav class="terminal-nav-large" aria-label="Navegación principal">
+  <a href="#" class="nav-logo-large">[G3_SYSTEM_CONTROL]</a>
+  <ul class="nav-links-large">
+    <li><a href="#">>_ PERFIL</a></li>
+    <li><a href="#">>_ MATERIAS</a></li>
+    <li><a href="#">>_ ENTREGAS</a></li>
+    
+    <!-- Element amb desplegable -->
+    <li class="nav-item-dropdown">
+      <a href="#" id="dropdown-trigger" onclick="toggleDropdown(event)">>_ AJUSTES ▼</a>
+      
+      <!-- Secció desplegable amagada -->
+      <div id="terminal-dropdown" class="dropdown-section">
+        <div class="dropdown-header">SYSTEM_SETTINGS_LOG</div>
+        <ul class="dropdown-menu-list">
+          <li><a href="#">[01] Cambiar Usuario</a></li>
+          <li><a href="#">[02] Configurar API</a></li>
+          <li><a href="#">[03] Forzar Sincronización</a></li>
+          <li><a href="#" class="danger-action">[04] Desconectar Terminal</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+
+
+    <main class="terminal-shell">
+      <div class="terminal-frame">
+        <header class="topbar">
+          <div class="brand">STUDENT_TERMINAL / PERFIL</div>
+          <div class="session">
+            sesión activa · <strong>martes 14 mayo 2024 / 09:41</strong>
+          </div>
+        </header>
+        <section class="hero" aria-labelledby="page-title">
+          <div>
+            <h1 id="page-title">
+             BIENVENIDOS A LA WS DEL <span>GRUPO 3</span>.<br />
+            <span class="caret" aria-hidden="true"></span>
+            </h1>
+          </div>
+
+        </section>
+
+        <section class="overview" aria-label="Resumen del perfil">
+          <article class="panel identity-panel">
+            <div class="monogram" aria-label="Iniciales LM">G3</div>
+            <div class="identity">
+              <h2>Grupo 3</h2>
+              <p>Ingeniería de Diseño · 3.º año · Campus Norte</p>
+              <div class="chips">
+                <span class="chip">ID 24-0917</span>
+                <span class="chip">beca activa</span>
+                <span class="chip">turno diurno</span>
+              </div>
+            </div>
+          </article>
+
+          </article>
+        </section>
+
+        <div class="workbench">
+          <section aria-labelledby="subjects-title">
+            <h2 class="section-label" id="subjects-title">materias activas</h2>
+
+            <div class="subject-list">
+              <article class="subject">
+                <span class="subject-code">ID-301</span>
+                <div>
+                  <h3>Sistemas de Información</h3>
+                  <p>Prof. Andrés Vila · mar / jue 10:00</p>
+                </div>
+                <div class="subject-grade">
+                  8.7
+                  <small>media</small>
+                </div>
+              </article>
+
+              <article class="subject">
+                <span class="subject-code">ID-318</span>
+                <div>
+                  <h3>Interacción Humano-Computadora</h3>
+                  <p>Prof. Noa Serrano · lun / mié 12:00</p>
+                </div>
+                <div class="subject-grade">
+                  9.1
+                  <small>media</small>
+                </div>
+              </article>
+
+              <article class="subject">
+                <span class="subject-code">ID-326</span>
+                <div>
+                  <h3>Laboratorio de Prototipos</h3>
+                  <p>Prof. Mateo Costa · vie 15:30</p>
+                </div>
+                <div class="subject-grade">
+                  8.4
+                  <small>media</small>student-terminal.css
+                </div>
+              </article>
+
+              <article class="subject">
+                <span class="subject-code">ID-340</span>
+                <div>
+                  <h3>Contexto y Cultura Digital</h3>
+                  <p>Prof. Inés Pardo · jue 16:00</p>
+                </div>
+                <div class="subject-grade">
+                  9.3
+                  <small>media</small>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel" aria-labelledby="deadlines-title">
+            <h2 class="section-label" id="deadlines-title">próximos hitos</h2>
+
+            <div class="deadline-list">
+              <article class="deadline urgent">
+                <time datetime="2024-05-17"><b>17</b>MAY</time>
+                <div>
+                  <h3>Kiran</h3>
+                  <p>Sistemas de Información · falta revisión final</p>
+                </div>
+              </article>
+
+              <article class="deadline">
+                <time datetime="2024-05-21"><b>21</b>MAY</time>
+                <div>
+                  <h3>Goar</h3>
+                  <p>Laboratorio · preparar recorrido de 7 min</p>
+                </div>
+              </article>
+
+              <article class="deadline">
+                <time datetime="2024-05-27"><b>27</b>MAY</time>
+                <div>
+                  <h3>Hicham</h3>
+                  <p>Contexto y Cultura Digital · 18 páginas</p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <div class="lower">
+          <section class="panel" aria-labelledby="activity-title">
+            <h2 class="section-label" id="activity-title">registro reciente</h2>
+
+            <div class="terminal-log">
+              <div class="log-line">
+                <span class="log-time">09:12:04</span>
+                <span><b>commit</b> · research-notes.md actualizado</span>
+              </div>
+              <div class="log-line">
+                <span class="log-time">ayer 18:44</span>
+                <span><b>entrega</b> · wireframes_v2.pdf sincronizado</span>
+              </div>
+              <div class="log-line">
+                <span class="log-time">ayer 16:20</span>
+                <span><em>nota</em> · “validar contraste en estados vacíos”</span>
+              </div>
+              <div class="log-line">
+                <span class="log-time">lun 11:03</span>
+                <span><b>sesión</b> · 42 min de lectura enfocada</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" aria-labelledby="focus-title">
+            <h2 class="section-label" id="focus-title">pulso del día</h2>
+            <p class="quote">
+              “Una decisión clara vale más que <span>diez pestañas abiertas.</span>”
+            </p>
+
+            <div class="focus-meter" aria-label="Nivel de enfoque alto">
+              <i></i><i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="focus-note">
+              enfoque estimado · alto / última sesión 42 min
+            </div>
+          </section>
+        </div>
+
+        <footer class="statusbar">
+          <span>terminal v2.4.1 · <strong>conectado</strong></span>
+          <div class="status-right">
+            <span>sincronizado</span>
+            <span>4 materias</span>
+            <span>0 alertas críticas</span>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
+
