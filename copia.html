@@ -1,215 +1,551 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Terminal / Perfil</title>
-    <link rel="stylesheet" href="assets/style.css" />
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WS1 · Sistemas Operativos</title>
+  <link rel="stylesheet" href="assets/style.css" />
 
+  <style>
+    .ws-hero h1 {
+      font-size: clamp(2.4rem, 5.6vw, 5.4rem);
+    }
 
-<nav class="terminal-nav-large" aria-label="Navegación principal">
-  <a href="#" class="nav-logo-large">[G3_SYSTEM_CONTROL]</a>
-  <ul class="nav-links-large">
-    <li><a href="#">>_ PERFIL</a></li>
-    <li><a href="#">>_ MATERIAS</a></li>
-    <li><a href="#">>_ ENTREGAS</a></li>
-    
-    <!-- Element amb desplegable -->
-    <li class="nav-item-dropdown">
-      <a href="#" id="dropdown-trigger" onclick="toggleDropdown(event)">>_ AJUSTES ▼</a>
-      
-      <!-- Secció desplegable amagada -->
-      <div id="terminal-dropdown" class="dropdown-section">
-        <div class="dropdown-header">SYSTEM_SETTINGS_LOG</div>
-        <ul class="dropdown-menu-list">
-          <li><a href="#">[01] Cambiar Usuario</a></li>
-          <li><a href="#">[02] Configurar API</a></li>
-          <li><a href="#">[03] Forzar Sincronización</a></li>
-          <li><a href="#" class="danger-action">[04] Desconectar Terminal</a></li>
-        </ul>
-      </div>
-    </li>
-  </ul>
-</nav>
+    .ilustracion {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
+    .ws-hero-figure {
+      margin: 0;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
 
+    .ws-lead {
+      max-width: 62ch;
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
 
-    <main class="terminal-shell">
-      <div class="terminal-frame">
-        <header class="topbar">
-          <div class="brand">STUDENT_TERMINAL / PERFIL</div>
-          <div class="session">
-            sesión activa · <strong>martes 14 mayo 2024 / 09:41</strong>
+    .ws-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border: 1px solid var(--green-dark);
+      color: var(--green);
+      font-family: inherit;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      background: rgba(155, 231, 174, 0.12);
+    }
+
+    .btn:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
+    }
+
+    .btn-solid {
+      background: var(--green);
+      color: var(--bg);
+    }
+
+    .btn-solid:hover,
+    .btn-solid:focus-visible {
+      background: #b6f0c4;
+    }
+
+    .ws-section {
+      margin-bottom: 56px;
+    }
+
+    /* ===== Resumen ===== */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .summary-grid h3 {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .summary-grid p,
+    .summary-grid li {
+      color: var(--white);
+      font-size: 0.82rem;
+      line-height: 1.7;
+    }
+
+    .summary-grid p {
+      margin: 0;
+    }
+
+    .summary-grid ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .summary-grid strong {
+      color: var(--amber);
+      font-weight: 500;
+    }
+
+    /* ===== Lista de recursos (estilo de la captura) ===== */
+    .recursos-title {
+      margin: 0 0 6px;
+      color: var(--amber);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+    }
+
+    .recurso {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      align-items: center;
+      gap: 16px;
+
+      padding: 24px 8px;
+      border-bottom: 1px solid var(--line);
+
+      color: inherit;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .recurso:last-child {
+      border-bottom: 0;
+    }
+
+    .recurso:hover,
+    .recurso:focus-visible {
+      background: rgba(155, 231, 174, 0.06);
+    }
+
+    .recurso:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: -2px;
+    }
+
+    .recurso-tag {
+      color: var(--green);
+      font-size: 0.72rem;
+    }
+
+    .recurso-title {
+      display: block;
+      color: var(--white);
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.4;
+      transition: color 0.2s ease;
+    }
+
+    .recurso:hover .recurso-title,
+    .recurso:focus-visible .recurso-title {
+      color: var(--green);
+    }
+
+    .recurso-meta {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    /* ===== Capturas ===== */
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .shots figure {
+      margin: 0;
+      border: 1px solid var(--line);
+    }
+
+    .shots figcaption {
+      padding: 10px 14px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.7rem;
+    }
+
+    /* ===== Tabla de comandos ===== */
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+    }
+
+    .cmd-table {
+      width: 100%;
+      min-width: 520px;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+    }
+
+    .cmd-table th,
+    .cmd-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+    }
+
+    .cmd-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .cmd-table th {
+      color: var(--amber);
+      font-weight: 500;
+      background: rgba(155, 231, 174, 0.05);
+    }
+
+    .cmd-table td {
+      color: var(--muted);
+    }
+
+    .cmd-table code {
+      color: var(--cyan);
+      font-family: inherit;
+    }
+
+    .cmd-table td:nth-child(2) code {
+      color: var(--green);
+    }
+
+    .ws-footer {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .summary-grid,
+      .shots {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .recurso {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== IMÁGENES (definidas una sola vez y reutilizadas más abajo) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <!-- Capas de un sistema operativo -->
+    <symbol id="img-capas" viewBox="0 0 400 340">
+      <rect width="400" height="340" fill="#0b1714" />
+      <g font-family="IBM Plex Mono, monospace" text-anchor="middle">
+        <rect x="30" y="24" width="340" height="60" fill="#10201b" stroke="#83d4d0" stroke-width="1.5" />
+        <text x="200" y="50" fill="#83d4d0" font-size="15" font-weight="600">APLICACIONES</text>
+        <text x="200" y="70" fill="#77948a" font-size="11">navegador · editor · juegos</text>
+
+        <rect x="30" y="100" width="340" height="60" fill="#10201b" stroke="#f2ba72" stroke-width="1.5" />
+        <text x="200" y="126" fill="#f2ba72" font-size="15" font-weight="600">SHELL / INTERFAZ</text>
+        <text x="200" y="146" fill="#77948a" font-size="11">terminal (CLI) · escritorio (GUI)</text>
+
+        <rect x="30" y="176" width="340" height="72" fill="#9be7ae" fill-opacity="0.1" stroke="#9be7ae" stroke-width="2" />
+        <text x="200" y="202" fill="#9be7ae" font-size="17" font-weight="700">KERNEL</text>
+        <text x="200" y="224" fill="#dfeee4" font-size="11">procesos · memoria · ficheros · E/S</text>
+        <text x="200" y="239" fill="#77948a" font-size="10">gestiona los recursos de la máquina</text>
+
+        <rect x="30" y="264" width="340" height="52" fill="#050b0a" stroke="#5eab7e" stroke-width="1.5" stroke-dasharray="6 4" />
+        <text x="200" y="288" fill="#dfeee4" font-size="15" font-weight="600">HARDWARE</text>
+        <text x="200" y="305" fill="#77948a" font-size="11">CPU · RAM · disco · red</text>
+      </g>
+      <g stroke="#5eab7e" stroke-width="1.5" fill="none">
+        <path d="M200 88v8M196 92l4 4 4-4" />
+        <path d="M200 164v8M196 168l4 4 4-4" />
+        <path d="M200 252v8M196 256l4 4 4-4" />
+      </g>
+    </symbol>
+
+    <!-- Terminal de Windows -->
+    <symbol id="img-windows" viewBox="0 0 480 280">
+      <rect width="480" height="280" fill="#050b0a" />
+      <rect x="14" y="14" width="452" height="252" fill="#0b1714" stroke="#83d4d0" stroke-width="1.5" />
+      <rect x="14" y="14" width="452" height="30" fill="#10201b" stroke="#83d4d0" stroke-width="1.5" />
+      <g font-family="IBM Plex Mono, monospace" font-size="12">
+        <text x="28" y="34" fill="#83d4d0" font-weight="600">Símbolo del sistema</text>
+        <rect x="392" y="24" width="10" height="10" fill="none" stroke="#83d4d0" />
+        <path d="M420 24l10 10M430 24l-10 10M366 30h10" stroke="#83d4d0" stroke-width="1.5" />
+        <text x="30" y="72" fill="#dfeee4">C:\Users\alumno&gt; dir</text>
+        <text x="30" y="92" fill="#77948a"> 15/09/2026  10:12    &lt;DIR&gt;   Documentos</text>
+        <text x="30" y="110" fill="#77948a"> 15/09/2026  10:12    &lt;DIR&gt;   Descargas</text>
+        <text x="30" y="138" fill="#dfeee4">C:\Users\alumno&gt; cd Documentos</text>
+        <text x="30" y="166" fill="#dfeee4">C:\Users\alumno\Documentos&gt; mkdir WS1</text>
+        <text x="30" y="194" fill="#dfeee4">C:\Users\alumno\Documentos&gt; ipconfig</text>
+        <text x="30" y="214" fill="#f2ba72">   Dirección IPv4 . . . : 192.168.1.24</text>
+        <text x="30" y="242" fill="#dfeee4">C:\Users\alumno\Documentos&gt; </text>
+        <rect x="234" y="231" width="8" height="14" fill="#9be7ae" />
+      </g>
+    </symbol>
+
+    <!-- Terminal de Linux -->
+    <symbol id="img-linux" viewBox="0 0 480 280">
+      <rect width="480" height="280" fill="#050b0a" />
+      <rect x="14" y="14" width="452" height="252" fill="#0b1714" stroke="#9be7ae" stroke-width="1.5" />
+      <rect x="14" y="14" width="452" height="30" fill="#10201b" stroke="#9be7ae" stroke-width="1.5" />
+      <circle cx="34" cy="29" r="5" fill="#ef9272" />
+      <circle cx="52" cy="29" r="5" fill="#f2ba72" />
+      <circle cx="70" cy="29" r="5" fill="#9be7ae" />
+      <g font-family="IBM Plex Mono, monospace" font-size="12">
+        <text x="240" y="34" fill="#9be7ae" font-weight="600" text-anchor="middle">alumno@g3: ~</text>
+        <text x="30" y="72" fill="#9be7ae">alumno@g3<tspan fill="#dfeee4">:</tspan><tspan fill="#83d4d0">~</tspan><tspan fill="#dfeee4">$ pwd</tspan></text>
+        <text x="30" y="90" fill="#77948a">/home/alumno</text>
+        <text x="30" y="118" fill="#9be7ae">alumno@g3<tspan fill="#dfeee4">:</tspan><tspan fill="#83d4d0">~</tspan><tspan fill="#dfeee4">$ ls -l</tspan></text>
+        <text x="30" y="136" fill="#77948a">drwxr-xr-x 2 alumno alumno 4096 sep 15 Documentos</text>
+        <text x="30" y="154" fill="#77948a">drwxr-xr-x 2 alumno alumno 4096 sep 15 Descargas</text>
+        <text x="30" y="182" fill="#9be7ae">alumno@g3<tspan fill="#dfeee4">:</tspan><tspan fill="#83d4d0">~</tspan><tspan fill="#dfeee4">$ mkdir WS1 &amp;&amp; cd WS1</tspan></text>
+        <text x="30" y="210" fill="#9be7ae">alumno@g3<tspan fill="#dfeee4">:</tspan><tspan fill="#83d4d0">~/WS1</tspan><tspan fill="#dfeee4">$ cat notas.txt</tspan></text>
+        <text x="30" y="228" fill="#f2ba72">El kernel gestiona procesos y memoria.</text>
+        <text x="30" y="252" fill="#9be7ae">alumno@g3<tspan fill="#dfeee4">:</tspan><tspan fill="#83d4d0">~/WS1</tspan><tspan fill="#dfeee4">$ </tspan></text>
+        <rect x="152" y="241" width="8" height="14" fill="#9be7ae" />
+      </g>
+    </symbol>
+  </svg>
+
+  <nav class="terminal-nav-large" aria-label="Navegación principal">
+    <a href="index.html" class="nav-logo-large">[G3_SYSTEM_CONTROL]</a>
+    <ul class="nav-links-large">
+      <li><a href="#recursos">&gt;_ MATERIAS</a></li>
+      <li><a href="#recursos">&gt;_ ENTREGAS</a></li>
+
+      <li class="nav-item-dropdown">
+        <a href="#" id="dropdown-trigger">&gt;_ AJUSTES ▼</a>
+
+        <div id="terminal-dropdown" class="dropdown-section">
+          <div class="dropdown-header">SYSTEM_SETTINGS_LOG</div>
+          <ul class="dropdown-menu-list">
+            <li><a href="/Digitalitzaci-/pagina1.html">WS1</a></li>
+            <li><a href="/Digitalitzaci-/pagina2.html">WS2</a></li>
+            <li><a href="/Digitalitzaci-/pagina3.html">WS3</a></li>
+            <li><a href="/Digitalitzaci-/pagina4.html">WS4</a></li>
+            <li><a href="/Digitalitzaci-/pagina5.html">WS5</a></li>
+            <li><a href="/Digitalitzaci-/pagina6.html">WS6</a></li>
+            <li><a href="/Digitalitzaci-/pagina7.html">WS7</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="terminal-shell">
+    <div class="terminal-frame">
+      <header class="topbar">
+        <div class="brand">STUDENT_TERMINAL / WS_01</div>
+        <div class="session">
+          sesión activa · <strong>Grupo 3 / Sistemas Operativos</strong>
+        </div>
+      </header>
+
+      <!-- ===== PORTADA ===== -->
+      <section class="hero ws-hero" aria-labelledby="page-title">
+        <div>
+          <h1 id="page-title">
+            WS_01<br />
+            <span>Sistemas Operativos</span><span class="caret" aria-hidden="true"></span>
+          </h1>
+          <p class="ws-lead">
+            Introducción a los sistemas operativos: qué son, qué hacen por
+            debajo y cómo se manejan desde la línea de comandos en Windows y
+            en Linux.
+          </p>
+          <div class="ws-actions">
+            <!-- CAMBIA los enlaces por los tuyos -->
+            <a class="btn btn-solid" href="docs/WS1-D01-Introduccio-als-Sistemes-Operatius.pdf">Ver presentación</a>
+            <a class="btn" href="practicas/WS1-A01-Sistemes-Operatius.pdf">Ver prácticas</a>
           </div>
-        </header>
-        <section class="hero" aria-labelledby="page-title">
-          <div>
-            <h1 id="page-title">
-             BIENVENIDOS A LA WS DEL <span>GRUPO 3</span>.<br />
-            <span class="caret" aria-hidden="true"></span>
-            </h1>
-          </div>
-
-        </section>
-
-        <section class="overview" aria-label="Resumen del perfil">
-          <article class="panel identity-panel">
-            <div class="monogram" aria-label="Iniciales LM">G3</div>
-            <div class="identity">
-              <h2>Grupo 3</h2>
-              <p>Ingeniería de Diseño · 3.º año · Campus Norte</p>
-              <div class="chips">
-                <span class="chip">ID 24-0917</span>
-                <span class="chip">beca activa</span>
-                <span class="chip">turno diurno</span>
-              </div>
-            </div>
-          </article>
-
-          </article>
-        </section>
-
-        <div class="workbench">
-          <section aria-labelledby="subjects-title">
-            <h2 class="section-label" id="subjects-title">materias activas</h2>
-
-            <div class="subject-list">
-              <article class="subject">
-                <span class="subject-code">ID-301</span>
-                <div>
-                  <h3>Sistemas de Información</h3>
-                  <p>Prof. Andrés Vila · mar / jue 10:00</p>
-                </div>
-                <div class="subject-grade">
-                  8.7
-                  <small>media</small>
-                </div>
-              </article>
-
-              <article class="subject">
-                <span class="subject-code">ID-318</span>
-                <div>
-                  <h3>Interacción Humano-Computadora</h3>
-                  <p>Prof. Noa Serrano · lun / mié 12:00</p>
-                </div>
-                <div class="subject-grade">
-                  9.1
-                  <small>media</small>
-                </div>
-              </article>
-
-              <article class="subject">
-                <span class="subject-code">ID-326</span>
-                <div>
-                  <h3>Laboratorio de Prototipos</h3>
-                  <p>Prof. Mateo Costa · vie 15:30</p>
-                </div>
-                <div class="subject-grade">
-                  8.4
-                  <small>media</small>student-terminal.css
-                </div>
-              </article>
-
-              <article class="subject">
-                <span class="subject-code">ID-340</span>
-                <div>
-                  <h3>Contexto y Cultura Digital</h3>
-                  <p>Prof. Inés Pardo · jue 16:00</p>
-                </div>
-                <div class="subject-grade">
-                  9.3
-                  <small>media</small>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <section class="panel" aria-labelledby="deadlines-title">
-            <h2 class="section-label" id="deadlines-title">próximos hitos</h2>
-
-            <div class="deadline-list">
-              <article class="deadline urgent">
-                <time datetime="2024-05-17"><b>17</b>MAY</time>
-                <div>
-                  <h3>Kiran</h3>
-                  <p>Sistemas de Información · falta revisión final</p>
-                </div>
-              </article>
-
-              <article class="deadline">
-                <time datetime="2024-05-21"><b>21</b>MAY</time>
-                <div>
-                  <h3>Goar</h3>
-                  <p>Laboratorio · preparar recorrido de 7 min</p>
-                </div>
-              </article>
-
-              <article class="deadline">
-                <time datetime="2024-05-27"><b>27</b>MAY</time>
-                <div>
-                  <h3>Hicham</h3>
-                  <p>Contexto y Cultura Digital · 18 páginas</p>
-                </div>
-              </article>
-            </div>
-          </section>
         </div>
 
-        <div class="lower">
-          <section class="panel" aria-labelledby="activity-title">
-            <h2 class="section-label" id="activity-title">registro reciente</h2>
+        <figure class="ws-hero-figure">
+          <svg class="ilustracion" viewBox="0 0 400 340" role="img"
+            aria-label="Esquema en capas: aplicaciones, shell, kernel y hardware">
+            <use href="#img-capas" />
+          </svg>
+        </figure>
+      </section>
 
-            <div class="terminal-log">
-              <div class="log-line">
-                <span class="log-time">09:12:04</span>
-                <span><b>commit</b> · research-notes.md actualizado</span>
-              </div>
-              <div class="log-line">
-                <span class="log-time">ayer 18:44</span>
-                <span><b>entrega</b> · wireframes_v2.pdf sincronizado</span>
-              </div>
-              <div class="log-line">
-                <span class="log-time">ayer 16:20</span>
-                <span><em>nota</em> · “validar contraste en estados vacíos”</span>
-              </div>
-              <div class="log-line">
-                <span class="log-time">lun 11:03</span>
-                <span><b>sesión</b> · 42 min de lectura enfocada</span>
-              </div>
-            </div>
-          </section>
+      <!-- ===== RESUMEN ===== -->
+      <section class="ws-section" id="resumen" aria-labelledby="resumen-title">
+        <h2 class="recursos-title" id="resumen-title">RESUMEN_WS1</h2>
 
-          <section class="panel" aria-labelledby="focus-title">
-            <h2 class="section-label" id="focus-title">pulso del día</h2>
-            <p class="quote">
-              “Una decisión clara vale más que <span>diez pestañas abiertas.</span>”
+        <div class="summary-grid">
+          <article class="panel">
+            <h3>¿Qué es un sistema operativo?</h3>
+            <p>
+              Es el software que hace de intermediario entre el hardware y los
+              programas. Reparte la CPU, la memoria y el disco entre las
+              aplicaciones y ofrece al usuario una forma de controlar el
+              equipo.
             </p>
+          </article>
 
-            <div class="focus-meter" aria-label="Nivel de enfoque alto">
-              <i></i><i></i><i></i><i></i><i></i>
-              <i></i><i></i><i></i><i></i><i></i>
-            </div>
-            <div class="focus-note">
-              enfoque estimado · alto / última sesión 42 min
-            </div>
-          </section>
+          <article class="panel">
+            <h3>Qué funciones tiene</h3>
+            <ul>
+              <li><strong>Procesos:</strong> decide qué programa usa la CPU y cuándo.</li>
+              <li><strong>Memoria:</strong> asigna y protege la RAM de cada programa.</li>
+              <li><strong>Ficheros:</strong> organiza los datos en carpetas y archivos.</li>
+              <li><strong>Entrada/salida:</strong> maneja teclado, pantalla, red y discos con drivers.</li>
+              <li><strong>Seguridad:</strong> controla usuarios y permisos.</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h3>Kernel y shell</h3>
+            <p>
+              El <strong>kernel</strong> es el núcleo: habla directamente con
+              el hardware. La <strong>shell</strong> es la capa que usamos
+              nosotros, y puede ser una terminal (CLI, con comandos) o un
+              escritorio gráfico (GUI).
+            </p>
+          </article>
+
+          <article class="panel">
+            <h3>Windows y Linux</h3>
+            <p>
+              Windows usa <strong>CMD</strong> o PowerShell y rutas con barra
+              invertida (<code>C:\Users</code>). Linux usa <strong>bash</strong>
+              y rutas con barra normal (<code>/home</code>), y distingue entre
+              mayúsculas y minúsculas.
+            </p>
+          </article>
         </div>
+      </section>
 
-        <footer class="statusbar">
-          <span>terminal v2.4.1 · <strong>conectado</strong></span>
-          <div class="status-right">
-            <span>sincronizado</span>
-            <span>4 materias</span>
-            <span>0 alertas críticas</span>
-          </div>
-        </footer>
-      </div>
-    </main>
-  </body>
+      <!-- ===== RECURSOS ===== -->
+      <section class="ws-section" id="recursos" aria-labelledby="recursos-title">
+        <h2 class="recursos-title" id="recursos-title">RECURSOS_WS1</h2>
+
+        <div class="recurso-list">
+          <!-- CAMBIA cada href por el enlace real -->
+          <a class="recurso" href="docs/WS1-D01-Introduccio-als-Sistemes-Operatius.pdf">
+            <span class="recurso-tag">[BOOK]</span>
+            <span>
+              <span class="recurso-title">WS1 - D01-Introducció als Sistemes Operatius</span>
+              <span class="recurso-meta">Material · Publicat el dia 15 de set.</span>
+            </span>
+          </a>
+
+          <a class="recurso" href="docs/windows-command-line-cheatsheet.pdf">
+            <span class="recurso-tag">[BOOK]</span>
+            <span>
+              <span class="recurso-title">Windows command line cheatsheet</span>
+              <span class="recurso-meta">Material · Publicat el dia 15 de set.</span>
+            </span>
+          </a>
+
+          <a class="recurso" href="docs/linux-command-line-cheatsheet.pdf">
+            <span class="recurso-tag">[BOOK]</span>
+            <span>
+              <span class="recurso-title">Linux command line cheatsheet (terminal)</span>
+              <span class="recurso-meta">Material · Publicat el dia 15 de set.</span>
+            </span>
+          </a>
+
+          <a class="recurso" href="practicas/WS1-A01-Sistemes-Operatius.pdf">
+            <span class="recurso-tag">[DONE]</span>
+            <span>
+              <span class="recurso-title">WS1 - A01-Sistemes Operatius</span>
+              <span class="recurso-meta">Completada · Data de venciment: Ahir 23:59</span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ===== CAPTURAS ===== -->
+      <section class="ws-section" id="capturas" aria-labelledby="capturas-title">
+        <h2 class="recursos-title" id="capturas-title">CAPTURAS_WS1</h2>
+
+        <div class="shots">
+          <figure>
+            <svg class="ilustracion" viewBox="0 0 480 280" role="img"
+              aria-label="Ventana del símbolo del sistema de Windows con comandos dir, cd y ipconfig">
+              <use href="#img-windows" />
+            </svg>
+            <figcaption>Línea de comandos de Windows (CMD)</figcaption>
+          </figure>
+
+          <figure>
+            <svg class="ilustracion" viewBox="0 0 480 280" role="img"
+              aria-label="Terminal de Linux con comandos pwd, ls y mkdir">
+              <use href="#img-linux" />
+            </svg>
+            <figcaption>Terminal de Linux (bash)</figcaption>
+          </figure>
+        </div>
+        <!-- Para usar una captura tuya, cambia el <svg> por:
+             <img src="ruta/de/tu-imagen.png" alt="descripción" style="width:100%;display:block" /> -->
+      </section>
+
+      <!-- ===== COMANDOS ===== -->
+      <section class="ws-section" id="comandos" aria-labelledby="comandos-title">
+        <h2 class="recursos-title" id="comandos-title">COMANDOS_BASICOS</h2>
+
+        <div class="table-wrap">
+          <table class="cmd-table">
+            <thead>
+              <tr>
+                <th scope="col">Windows (CMD)</th>
+                <th scope="col">Linux (bash)</th>
+                <th scope="col">Qué hace</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>dir</code></td><td><code>ls</code></td><td>Lista el contenido de la carpeta</td></tr>
+              <tr><td><code>cd</code></td><td><code>cd</code></td><td>Cambia de carpeta</td></tr>
+              <tr><td><code>cd</code> (sin nombre)</td><td><code>pwd</code></td><td>Muestra la carpeta actual</td></tr>
+              <tr><td><code>mkdir</code></td><td><code>mkdir</code></td><td>Crea una carpeta</td></tr>
+              <tr><td><code>copy</code></td><td><code>cp</code></td><td>Copia un archivo</td></tr>
+              <tr><td><code>move</code></td><td><code>mv</code></td><td>Mueve o renombra un archivo</td></tr>
+              <tr><td><code>del</code></td><td><code>rm</code></td><td>Borra un archivo</td></tr>
+              <tr><td><code>type</code></td><td><code>cat</code></td><td>Muestra el contenido de un archivo</td></tr>
+              <tr><td><code>cls</code></td><td><code>clear</code></td><td>Limpia la pantalla</td></tr>
+              <tr><td><code>tasklist</code></td><td><code>ps</code></td><td>Lista los procesos en ejecución</td></tr>
+              <tr><td><code>ipconfig</code></td><td><code>ip a</code></td><td>Muestra la configuración de red</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="statusbar ws-footer">
+        <span><strong>WS_01</strong> · Grupo 3</span>
+        <div class="status-right">
+          <span>3 materiales</span>
+          <span>1 práctica</span>
+          <a class="btn" href="index.html">← Volver a los WS</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+</body>
+
 </html>
-
