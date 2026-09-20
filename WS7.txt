@@ -1,0 +1,7 @@
+RESUM DEL WS
+
+En aquest workshop hem après que una aplicació necessita una infraestructura per poder funcionar: servidors, xarxes, dispositius i dades. Hem treballat la virtualització i els perfils relacionats amb l’administració de sistemes, xarxes, ciberseguretat, cloud i DevOps. Hem comparat la infraestructura local amb el cloud computing i els seus avantatges, com l’escalabilitat, la flexibilitat, l’accés remot i la reducció d’inversió en maquinari. També hem vist els tipus de cloud públic, privat i híbrid, i els models de servei IaaS, PaaS i SaaS. Finalment, hem introduït l’arquitectura de tres capes, les API i reptes com la disponibilitat, l’escalabilitat i la seguretat.
+
+ACTIVITAT DEL WS
+
+A l’activitat hem hagut d’investigar conceptes d’infraestructura i cloud: CI/CD, els requisits d’un CPD, el cost d’una instància EC2 d’AWS i l’arquitectura mínima d’una aplicació web dinàmica. També s’ha demanat investigar arquitectures de grans plataformes com Facebook, HBO i Netflix.
