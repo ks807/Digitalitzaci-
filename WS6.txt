@@ -1,0 +1,7 @@
+RESUM DEL WS
+
+En aquest workshop hem treballat els conceptes bàsics de la intel·ligència artificial i, especialment, de la IA generativa. Hem vist com aquests models poden generar contingut a partir de patrons apresos i com els prompts condicionen la qualitat de les respostes. Hem introduït el prompt engineering, els prompts estructurats i tècniques com Chain of Thought, Tree of Thought i el framework RASCEF. També hem treballat conceptes com tokens, agents i skills. Una part important ha estat entendre les limitacions de la IA, com els biaixos, les al·lucinacions i els errors, i la necessitat de verificar la informació, protegir dades sensibles i utilitzar aquestes eines de manera responsable.
+
+ACTIVITAT DEL WS
+
+A les activitats hem comparat el nombre de tokens entre models i llengües, hem contrastat vibe coding amb prompts estructurats amb RASCEF i hem creat una skill per revisar codi. També hem hagut d’analitzar els resultats, comparar eines i reflexionar sobre la qualitat, les limitacions i l’ús responsable de la IA.
