@@ -1,0 +1,7 @@
+RESUM DEL WS
+
+En aquest workshop hem après els conceptes bàsics dels sistemes operatius i hem comparat sistemes propietaris, com Windows i macOS, amb sistemes lliures com Linux. També hem començat a treballar amb el terminal, utilitzant comandes com ls, pwd, cd, mkdir, touch, cat, mv, cp i rm per navegar i gestionar fitxers i carpetes. Hem vist conceptes bàsics de xarxes, com les adreces IP, la màscara, el gateway i el DNS. A més, hem treballat la virtualització, tant en local amb VirtualBox com en remot amb IsardVDI, entenent com una màquina virtual utilitza recursos de maquinari assignats.
+
+ACTIVITAT DEL WS
+
+A l’activitat hem hagut d’utilitzar el terminal i documentar els resultats amb captures de pantalla. Hem executat comandes com uname -a, df -h, ps aux, cat, kill i top per consultar informació del sistema, l’espai de disc i els processos. També hem creat màquines virtuals en local i en remot.
