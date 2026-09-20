@@ -1085,3 +1085,40 @@ body {
     gap: 6px;
   }
 }
+
+
+
+
+
+
+
+/* Panel con imagen al lado del texto */
+.panel-imagen {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.panel-imagen img {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 1px solid var(--green-dark);
+}
+
+.panel-imagen .texto {
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .panel-imagen img {
+    width: 88px;
+    height: 88px;
+  }
+}
+
+.ws-hero-figure .ilustracion {
+  aspect-ratio: 400 / 340;
+  object-fit: cover;
+}
