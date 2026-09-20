@@ -1,0 +1,7 @@
+RESUM DEL WS
+
+En aquest workshop hem après què és el control de versions i per què és important en el desenvolupament de programari. Hem vist que permet conservar un historial de canvis, identificar qui els ha fet, recuperar versions anteriors i facilitar el treball en equip. També hem estudiat com funciona l’historial de versions de Google Suite i l’evolució dels sistemes de control de versions fins a Git. Hem diferenciat Git, que gestiona versions localment, de GitHub, que permet allotjar repositoris remots i col·laborar. Hem treballat conceptes com repositori, commit, branca, push, pull i Pull Request, així com la personalització del perfil de GitHub amb Markdown.
+
+ACTIVITAT DEL WS
+
+A les activitats hem practicat el control de versions modificant un conte en diferents etapes i guardant versions identificades. També hem hagut de crear o configurar un perfil professional de GitHub, associar-hi el correu de l’ITB i personalitzar el README del perfil utilitzant Markdown.
