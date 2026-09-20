@@ -1,0 +1,7 @@
+RESUM DEL WS
+
+En aquest workshop hem treballat la importància de les dades i de les bases de dades en una societat que genera grans quantitats d’informació. Hem vist com les dades es poden organitzar en taules i com una estructura adequada evita repeticions i facilita la consulta de la informació. També hem conegut l’ús de serveis al núvol per allotjar bases de dades i hem treballat amb Alwaysdata. Hem après a crear bases de dades, importar fitxers SQL i utilitzar una consola per executar consultes. Amb SQL hem practicat instruccions de consulta com SELECT per obtenir informació de les taules. També hem introduït l’ús de DataGrip com a client de bases de dades.
+
+ACTIVITAT DEL WS
+
+A l’activitat hem hagut de crear un compte a Alwaysdata, crear i importar les bases de dades hr i training i executar diverses consultes SQL. També hem configurat connexions amb DataGrip, creat usuaris i permisos i generat els diagrames Entitat-Relació de les bases de dades utilitzades.

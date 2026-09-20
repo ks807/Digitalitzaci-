@@ -1,0 +1,7 @@
+RESUM DEL WS
+
+En aquest workshop hem après conceptes bàsics de disseny d’interfícies, usabilitat i experiència d’usuari. Hem vist que una web ha de ser intuïtiva, clara i fàcil de navegar. Hem diferenciat UX, relacionada amb l’experiència de l’usuari, i UI, relacionada amb l’aspecte visual, com colors, tipografies, icones i imatges. També hem treballat els wireframes, els fluxos de navegació, l’arquitectura de la informació i l’accessibilitat. A nivell tècnic, hem introduït l’arquitectura client-servidor, on el navegador fa peticions i el servidor processa i retorna informació. Finalment, hem analitzat exemples de bones i males pràctiques de disseny web.
+
+ACTIVITAT DEL WS
+
+A l’activitat hem hagut d’analitzar una pàgina web real. Hem valorat la primera impressió, la usabilitat, el disseny, la navegació, el contingut, les funcionalitats i l’accessibilitat. També hem creat wireframes, identificat l’arquitectura client-servidor i elaborat un DAFO amb punts forts, febles i possibles millores.

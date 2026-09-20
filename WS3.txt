@@ -1,0 +1,7 @@
+RESUM DEL WS
+
+En aquest workshop hem fet una introducció a la programació amb Kotlin i als entorns de desenvolupament. Hem vist què és un IDE i hem treballat amb eines com IntelliJ IDEA i Visual Studio Code. Hem après a mostrar informació per pantalla amb print() i println(), i a llegir dades amb readln(). També hem treballat les variables i els tipus bàsics String, Int, Float i Boolean, incloent conversions com toInt() i toFloat(). Hem practicat operadors aritmètics i la combinació de text amb variables. Finalment, hem introduït els condicionals amb if, que permeten executar determinades instruccions només quan es compleix una condició.
+
+ACTIVITAT DEL WS
+
+A les activitats hem hagut de crear programes en Kotlin: una salutació amb el nostre nom, un programa que calcula quants anys falten per arribar als 100 i una calculadora. Com a ampliació, la calculadora havia de permetre seleccionar operacions i treballar també amb nombres decimals.
