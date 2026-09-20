@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WS3 · Programación 💻</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/ws.css" />
+</head>
+
+<body>
+  <nav class="terminal-nav-large" aria-label="Navegación principal">
+    <a href="index.html" class="nav-logo-large">[G3_SYSTEM_CONTROL]</a>
+    <ul class="nav-links-large">
+      <li><a href="#recursos">&gt;_ MATERIAS</a></li>
+      <li><a href="#recursos">&gt;_ ENTREGAS</a></li>
+      <li class="nav-item-dropdown">
+        <a href="#" id="dropdown-trigger">&gt;_ AJUSTES ▼</a>
+        <div id="terminal-dropdown" class="dropdown-section">
+          <div class="dropdown-header">SYSTEM_SETTINGS_LOG</div>
+          <ul class="dropdown-menu-list">
+            <li><a href="/Digitalitzaci-/pagina1.html">WS1</a></li>
+            <li><a href="/Digitalitzaci-/pagina2.html">WS2</a></li>
+            <li><a href="/Digitalitzaci-/pagina3.html">WS3</a></li>
+            <li><a href="/Digitalitzaci-/pagina4.html">WS4</a></li>
+            <li><a href="/Digitalitzaci-/pagina5.html">WS5</a></li>
+            <li><a href="/Digitalitzaci-/pagina6.html">WS6</a></li>
+            <li><a href="/Digitalitzaci-/pagina7.html">WS7</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="terminal-shell">
+    <div class="terminal-frame">
+      <header class="topbar">
+        <div class="brand">STUDENT_TERMINAL / WS_03</div>
+        <div class="session">sesión activa · <strong>Grupo 3 / Programación 💻</strong></div>
+      </header>
+
+      <section class="hero ws-hero" aria-labelledby="page-title">
+        <div>
+          <h1 id="page-title">
+            WS_03<br />
+            <span>Programación</span><span class="caret" aria-hidden="true"></span>
+          </h1>
+          <p class="ws-lead">
+            Primeros pasos programando en Kotlin: leer y mostrar datos,
+            hacer operaciones y tomar decisiones con condicionales.
+          </p>
+          <div class="ws-actions">
+            <a class="btn btn-solid" href="#recursos">Ver recursos</a>
+            <a class="btn" href="index.html">← Volver a los WS</a>
+          </div>
+        </div>
+
+        <figure class="ws-hero-figure">
+          <svg class="ilustracion" viewBox="0 0 400 340" role="img"
+            aria-label="Editor de código con un programa en Kotlin que pide un nombre y lo saluda">
+            <rect width="400" height="340" fill="#0b1714" />
+            <rect x="24" y="30" width="352" height="200" fill="#050b0a" stroke="#f2ba72" stroke-width="1.5" />
+            <rect x="24" y="30" width="352" height="28" fill="#10201b" stroke="#f2ba72" stroke-width="1.5" />
+            <g font-family="IBM Plex Mono, monospace">
+              <text x="38" y="49" fill="#f2ba72" font-size="12" font-weight="600">Main.kt</text>
+              <g font-size="13">
+                <text x="40" y="90"><tspan fill="#f2ba72">fun</tspan><tspan fill="#dfeee4"> main() {</tspan></text>
+                <text x="62" y="120"><tspan fill="#f2ba72">val</tspan><tspan fill="#dfeee4"> nombre = readln()</tspan></text>
+                <text x="62" y="150" fill="#dfeee4">println(<tspan fill="#9be7ae">"Hola $nombre"</tspan>)</text>
+                <text x="40" y="180" fill="#dfeee4">}</text>
+              </g>
+              <text x="30" y="268" fill="#77948a" font-size="12">salida:</text>
+              <text x="30" y="292" fill="#9be7ae" font-size="15">Hola Ana</text>
+            </g>
+          </svg>
+        </figure>
+      </section>
+
+      <section class="ws-section" id="resumen" aria-labelledby="resumen-title">
+        <h2 class="recursos-title" id="resumen-title">RESUMEN_WS3</h2>
+        <div class="summary-grid">
+          <article class="panel">
+            <h3>Entrada y salida</h3>
+            <p>
+              Un programa recibe datos del usuario (<code>readln()</code>) y
+              muestra resultados por pantalla (<code>println()</code>). Es la
+              base de cualquier programa interactivo.
+            </p>
+          </article>
+          <article class="panel">
+            <h3>Variables y tipos</h3>
+            <p>
+              Las variables guardan datos con un tipo: <strong>Int</strong>
+              para enteros, <strong>Double</strong> para decimales y
+              <strong>String</strong> para texto.
+            </p>
+          </article>
+          <article class="panel">
+            <h3>Operar con datos</h3>
+            <p>
+              Con los operadores <code>+</code> <code>-</code>
+              <code>*</code> <code>/</code> <code>%</code> se hacen cálculos
+              con las variables y se guarda el resultado.
+            </p>
+          </article>
+          <article class="panel">
+            <h3>Condicionales</h3>
+            <p>
+              Con <code>if</code>, <code>else if</code> y <code>else</code>
+              el programa elige un camino según una condición. La calculadora
+              combina las tres ideas: leer, operar y decidir.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ws-section" id="recursos" aria-labelledby="recursos-title">
+        <h2 class="recursos-title" id="recursos-title">RECURSOS_WS3</h2>
+        <div class="recurso-list">
+          <!-- CAMBIA cada href="#" por el enlace real -->
+          <a class="recurso" href="#">
+            <span class="recurso-tag">[DONE]</span>
+            <span>
+              <span class="recurso-title">WS3 - Activitat 3 - Calculadora</span>
+              <span class="recurso-meta">Completada · Sense data de venciment</span>
+            </span>
+          </a>
+          <a class="recurso" href="#">
+            <span class="recurso-tag">[BOOK]</span>
+            <span>
+              <span class="recurso-title">Condicionals</span>
+              <span class="recurso-meta">Material · Publicat el dia 17 de set.</span>
+            </span>
+          </a>
+          <a class="recurso" href="#">
+            <span class="recurso-tag">[DONE]</span>
+            <span>
+              <span class="recurso-title">WS3 - Activitat 2 - Operar amb dades</span>
+              <span class="recurso-meta">Completada · Sense data de venciment</span>
+            </span>
+          </a>
+          <a class="recurso" href="#">
+            <span class="recurso-tag">[BOOK]</span>
+            <span>
+              <span class="recurso-title">Entrada i sortida</span>
+              <span class="recurso-meta">Material · Publicat el dia 17 de set.</span>
+            </span>
+          </a>
+          <a class="recurso" href="#">
+            <span class="recurso-tag">[DONE]</span>
+            <span>
+              <span class="recurso-title">WS3 - Activitat 1 - "Hello alumne"</span>
+              <span class="recurso-meta">Completada · Sense data de venciment</span>
+            </span>
+          </a>
+          <a class="recurso" href="#">
+            <span class="recurso-tag">[BOOK]</span>
+            <span>
+              <span class="recurso-title">Plotter</span>
+              <span class="recurso-meta">Material · Publicat el dia 17 de set.</span>
+            </span>
+          </a>
+          <a class="recurso" href="#">
+            <span class="recurso-tag">[BOOK]</span>
+            <span>
+              <span class="recurso-title">Introducció</span>
+              <span class="recurso-meta">Material · Publicat el dia 17 de set.</span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <footer class="statusbar ws-footer">
+        <span><strong>WS_03</strong> · Grupo 3</span>
+        <div class="status-right">
+          <span>4 materiales</span>
+          <span>3 tareas</span>
+          <a class="btn" href="index.html">← Volver a los WS</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+</body>
+
+</html>

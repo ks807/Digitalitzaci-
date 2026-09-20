@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WS7 · IT/IoT 💻⚙️</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/ws.css" />
+</head>
+
+<body>
+  <nav class="terminal-nav-large" aria-label="Navegación principal">
+    <a href="index.html" class="nav-logo-large">[G3_SYSTEM_CONTROL]</a>
+    <ul class="nav-links-large">
+      <li><a href="#recursos">&gt;_ MATERIAS</a></li>
+      <li><a href="#recursos">&gt;_ ENTREGAS</a></li>
+      <li class="nav-item-dropdown">
+        <a href="#" id="dropdown-trigger">&gt;_ AJUSTES ▼</a>
+        <div id="terminal-dropdown" class="dropdown-section">
+          <div class="dropdown-header">SYSTEM_SETTINGS_LOG</div>
+          <ul class="dropdown-menu-list">
+            <li><a href="/Digitalitzaci-/pagina1.html">WS1</a></li>
+            <li><a href="/Digitalitzaci-/pagina2.html">WS2</a></li>
+            <li><a href="/Digitalitzaci-/pagina3.html">WS3</a></li>
+            <li><a href="/Digitalitzaci-/pagina4.html">WS4</a></li>
+            <li><a href="/Digitalitzaci-/pagina5.html">WS5</a></li>
+            <li><a href="/Digitalitzaci-/pagina6.html">WS6</a></li>
+            <li><a href="/Digitalitzaci-/pagina7.html">WS7</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="terminal-shell">
+    <div class="terminal-frame">
+      <header class="topbar">
+        <div class="brand">STUDENT_TERMINAL / WS_07</div>
+        <div class="session">sesión activa · <strong>Grupo 3 / IT-IoT 💻⚙️</strong></div>
+      </header>
+
+      <section class="hero ws-hero" aria-labelledby="page-title">
+        <div>
+          <h1 id="page-title">
+            WS_07<br />
+            <span>IT / IoT</span><span class="caret" aria-hidden="true"></span>
+          </h1>
+          <p class="ws-lead">
+            Infraestructuras cloud y dispositivos conectados: cómo viajan los
+            datos desde un sensor hasta la nube.
+          </p>
+          <div class="ws-actions">
+            <a class="btn btn-solid" href="#recursos">Ver recursos</a>
+            <a class="btn" href="index.html">← Volver a los WS</a>
+          </div>
+        </div>
+
+        <figure class="ws-hero-figure">
+          <svg class="ilustracion" viewBox="0 0 400 340" role="img"
+            aria-label="Tres sensores conectados a una pasarela y esta a la nube">
+            <rect width="400" height="340" fill="#0b1714" />
+            <g fill="none" stroke="#5eab7e" stroke-width="1.8" stroke-dasharray="5 4">
+              <path d="M200 132V196" />
+              <path d="M200 236V262M90 262H310M90 262V276M200 262V276M310 262V276" />
+            </g>
+            <path d="M130 130C98 130 98 88 132 86C134 56 180 48 196 72C212 46 262 54 266 90C298 90 304 130 272 130Z"
+              fill="#83d4d0" fill-opacity="0.1" stroke="#83d4d0" stroke-width="2" />
+            <rect x="150" y="196" width="100" height="40" fill="#10201b" stroke="#f2ba72" stroke-width="1.8" />
+            <g fill="#9be7ae" stroke="#0b1714" stroke-width="3">
+              <circle cx="90" cy="292" r="15" />
+              <circle cx="200" cy="292" r="15" />
+              <circle cx="310" cy="292" r="15" />
+            </g>
+            <g font-family="IBM Plex Mono, monospace" text-anchor="middle">
+              <text x="200" y="114" fill="#83d4d0" font-size="15" font-weight="600">CLOUD</text>
+              <text x="200" y="221" fill="#f2ba72" font-size="12" font-weight="600">gateway</text>
+              <text x="90" y="326" fill="#77948a" font-size="10">temperatura</text>
+              <text x="200" y="326" fill="#77948a" font-size="10">humedad</text>
+              <text x="310" y="326" fill="#77948a" font-size="10">movimiento</text>
+            </g>
+          </svg>
+        </figure>
+      </section>
+
+      <section class="ws-section" id="resumen" aria-labelledby="resumen-title">
+        <h2 class="recursos-title" id="resumen-title">RESUMEN_WS7</h2>
+        <div class="summary-grid">
+          <article class="panel">
+            <h3>Infraestructura cloud</h3>
+            <p>
+              Servidores, almacenamiento y redes que se contratan por internet
+              en lugar de tenerlos en local. Se pueden ampliar o reducir según
+              la necesidad y se paga por lo que se usa.
+            </p>
+          </article>
+          <article class="panel">
+            <h3>Modelos de servicio</h3>
+            <ul>
+              <li><strong>IaaS:</strong> alquilas la infraestructura (máquinas, red).</li>
+              <li><strong>PaaS:</strong> alquilas una plataforma para desplegar tu app.</li>
+              <li><strong>SaaS:</strong> usas una aplicación ya hecha.</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <h3>¿Qué es IoT?</h3>
+            <p>
+              Internet de las cosas: objetos con sensores y conexión a la red
+              que recogen datos del entorno y los envían para procesarlos, como
+              termostatos, cámaras o relojes inteligentes.
+            </p>
+          </article>
+          <article class="panel">
+            <h3>Del sensor a la nube</h3>
+            <p>
+              El sensor mide, una pasarela (gateway) reúne y envía los datos,
+              la nube los almacena y procesa, y una aplicación los muestra al
+              usuario.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ws-section" id="recursos" aria-labelledby="recursos-title">
+        <h2 class="recursos-title" id="recursos-title">RECURSOS_WS7</h2>
+        <div class="recurso-list">
+          <!-- CAMBIA cada href="#" por el enlace real -->
+          <a class="recurso" href="#">
+            <span class="recurso-tag">[BOOK]</span>
+            <span>
+              <span class="recurso-title">WS7 - D01-Infraestructures cloud</span>
+              <span class="recurso-meta">Material · Publicat el dia 18 de set.</span>
+            </span>
+          </a>
+          <a class="recurso" href="#">
+            <span class="recurso-tag">[DONE]</span>
+            <span>
+              <span class="recurso-title">WS7 - A01-Activitat A1</span>
+              <span class="recurso-meta">Completada · Data de venciment: 18 de set. 23:59</span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <footer class="statusbar ws-footer">
+        <span><strong>WS_07</strong> · Grupo 3</span>
+        <div class="status-right">
+          <span>1 material</span>
+          <span>1 tarea</span>
+          <a class="btn" href="index.html">← Volver a los WS</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+</body>
+
+</html>

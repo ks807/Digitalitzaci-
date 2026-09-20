@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Terminal / Perfil</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <style>
+        /* Perfiles de GitHub */
+.perfiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.perfil {
+  --c: var(--green);
+
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+
+  border: 1px solid var(--c);
+  background: color-mix(in srgb, var(--c) 6%, transparent);
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.perfil:hover,
+.perfil:focus-visible {
+  background: color-mix(in srgb, var(--c) 16%, transparent);
+}
+
+.perfil:focus-visible {
+  outline: 2px solid var(--c);
+  outline-offset: 3px;
+}
+
+.perfil-inicial {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--c);
+  color: var(--c);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+}
+
+.perfil-nombre {
+  display: block;
+  color: var(--c);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.perfil-url {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  overflow-wrap: anywhere;
+}
+/* Miembro que ya no participa: color apagado */
+.perfil-4 {
+  --c: var(--muted);
+  opacity: 0.5;
+}
+
+.perfil-4:hover,
+.perfil-4:focus-visible {
+  opacity: 0.8;
+}
+/* Un color para cada perfil */
+.for .perfil-4 {
+  color: #e5e2de3a;
+}
+    </style>
+</head>
+
+<body>
+    <main>      
+        <section class="ws-section" id="perfiles" aria-labelledby="perfiles-title">
+        <h2 class="recursos-title" id="perfiles-title">PERFILES_GITHUB</h2>
+
+        <div class="perfiles-grid">
+          <!-- CAMBIA en cada tarjeta: href, inicial, nombre y texto del enlace -->
+          <a class="perfil perfil-1" href="https://github.com/USUARIO1" target="_blank" rel="noopener">
+            <span class="perfil-inicial" aria-hidden="true">A</span>
+            <span>
+              <span class="perfil-nombre">Nombre 1</span>
+              <span class="perfil-url">github.com/usuario1</span>
+            </span>
+          </a>
+
+          <a class="perfil perfil-2" href="https://github.com/USUARIO2" target="_blank" rel="noopener">
+            <span class="perfil-inicial" aria-hidden="true">B</span>
+            <span>
+              <span class="perfil-nombre">Nombre 2</span>
+              <span class="perfil-url">github.com/usuario2</span>
+            </span>
+          </a>
+
+          <a class="perfil perfil-3" href="https://github.com/USUARIO3" target="_blank" rel="noopener">
+            <span class="perfil-inicial" aria-hidden="true">C</span>
+            <span>
+              <span class="perfil-nombre">Nombre 3</span>
+              <span class="perfil-url">github.com/usuario3</span>
+            </span>
+          </a>
+
+          <a class="perfil perfil-4" href="https://github.com/USUARIO4" target="_blank" rel="noopener">
+            <span class="perfil-inicial" aria-hidden="true">D</span>
+            <span>
+              <span class="perfil-nombre">Nombre 4</span>
+              <span class="perfil-url">github.com/usuario4</span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      </main>
+</body>

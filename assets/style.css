@@ -1122,3 +1122,69 @@ body {
   aspect-ratio: 400 / 340;
   object-fit: cover;
 }
+
+
+
+/* Panel con aspecto de terminal */
+.terminal-sql {
+  padding: 0;
+  overflow: hidden;
+  border-color: var(--green-dark);
+  background: #050b0a;
+}
+
+.terminal-sql-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel-light);
+}
+
+.terminal-sql-bar i {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-sql-bar i:nth-child(1) { background: var(--red); }
+.terminal-sql-bar i:nth-child(2) { background: var(--amber); }
+.terminal-sql-bar i:nth-child(3) { background: var(--green); }
+
+.terminal-sql-bar span {
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.terminal-sql h3 {
+  margin: 0;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.terminal-sql pre {
+  margin: 0;
+  padding: 18px;
+  overflow-x: auto;
+  color: var(--white);
+  font-family: inherit;
+  font-size: 0.78rem;
+  line-height: 1.9;
+  white-space: pre;
+}
+
+.terminal-sql code {
+  font-family: inherit;
+  color: inherit;
+}
+
+.terminal-sql .pr { color: var(--green); }   /* prompt */
+.terminal-sql .kw { color: var(--amber); }   /* palabras SQL */
+.terminal-sql .st { color: var(--cyan); }    /* textos entre comillas */
+.terminal-sql .cm { color: var(--muted); }   /* comentarios */
