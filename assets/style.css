@@ -1188,3 +1188,130 @@ body {
 .terminal-sql .kw { color: var(--amber); }   /* palabras SQL */
 .terminal-sql .st { color: var(--cyan); }    /* textos entre comillas */
 .terminal-sql .cm { color: var(--muted); }   /* comentarios */
+
+    .perfiles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    /* Tarjeta: todo centrado, foto arriba y datos debajo */
+    .perfil {
+      --c: var(--green);
+
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 0;
+      overflow: hidden;
+
+      border: 1px solid var(--c);
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--c) 6%, transparent);
+      text-align: center;
+      transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+    }
+
+    .perfil:hover,
+    .perfil:focus-within {
+      background: color-mix(in srgb, var(--c) 16%, transparent);
+      transform: translateY(-4px);
+    }
+
+    /* Foto cuadrada */
+        .perfil-foto {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border: 0;
+      border-bottom: 1px solid var(--c);
+      border-radius: 0;
+    }
+
+    /* Datos debajo de la foto */
+       .perfil-datos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 20px 20px 24px;
+    }
+
+    .perfil-nombre {
+      margin: 0;
+      color: var(--c);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .perfil-url {
+      color: var(--cyan);
+      font-size: 0.85rem;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .perfil-url:hover {
+      text-decoration: underline;
+    }
+
+    /* Toda la tarjeta es clicable: el enlace se estira sobre ella */
+    .perfil-url::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+    }
+
+    .perfil-url:focus-visible {
+      outline: none;
+    }
+
+        .perfil-url:focus-visible::after {
+      outline: 2px solid var(--c);
+      outline-offset: -3px;
+    }
+
+    .perfil-info {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    /* Un color para cada perfil */
+    .perfil-1 { --c: var(--green); }
+    .perfil-2 { --c: var(--cyan); }
+    .perfil-3 { --c: var(--amber); }
+
+    /* Miembro que ya no participa: color apagado y foto en gris */
+    .perfil-4 {
+      --c: var(--muted);
+      opacity: 0.5;
+    }
+
+    .perfil-4 .perfil-foto {
+      filter: grayscale(1);
+    }
+
+    .perfil-4:hover,
+    .perfil-4:focus-within {
+      opacity: 0.8;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .perfil {
+        transition: none;
+      }
+
+      .perfil:hover,
+      .perfil:focus-within {
+        transform: none;
+      }
+    }

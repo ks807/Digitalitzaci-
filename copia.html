@@ -6,137 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Terminal / Perfil</title>
   <link rel="stylesheet" href="assets/style.css" />
-  <style>
-    /* ==========================================
-       PERFILES DE GITHUB
-       ========================================== */
-    .perfiles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      margin-top: 20px;
-    }
-
-    /* Tarjeta: todo centrado, foto arriba y datos debajo */
-    .perfil {
-      --c: var(--green);
-
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0;
-      padding: 0;
-      overflow: hidden;
-
-      border: 1px solid var(--c);
-      border-radius: 12px;
-      background: color-mix(in srgb, var(--c) 6%, transparent);
-      text-align: center;
-      transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease;
-    }
-
-    .perfil:hover,
-    .perfil:focus-within {
-      background: color-mix(in srgb, var(--c) 16%, transparent);
-      transform: translateY(-4px);
-    }
-
-    /* Foto cuadrada */
-        .perfil-foto {
-      display: block;
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border: 0;
-      border-bottom: 1px solid var(--c);
-      border-radius: 0;
-    }
-
-    /* Datos debajo de la foto */
-       .perfil-datos {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      padding: 20px 20px 24px;
-    }
-
-    .perfil-nombre {
-      margin: 0;
-      color: var(--c);
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .perfil-url {
-      color: var(--cyan);
-      font-size: 0.85rem;
-      text-decoration: none;
-      overflow-wrap: anywhere;
-    }
-
-    .perfil-url:hover {
-      text-decoration: underline;
-    }
-
-    /* Toda la tarjeta es clicable: el enlace se estira sobre ella */
-    .perfil-url::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 12px;
-    }
-
-    .perfil-url:focus-visible {
-      outline: none;
-    }
-
-        .perfil-url:focus-visible::after {
-      outline: 2px solid var(--c);
-      outline-offset: -3px;
-    }
-
-    .perfil-info {
-      margin: 4px 0 0;
-      color: var(--muted);
-      font-size: 0.8rem;
-      line-height: 1.6;
-    }
-
-    /* Un color para cada perfil */
-    .perfil-1 { --c: var(--green); }
-    .perfil-2 { --c: var(--cyan); }
-    .perfil-3 { --c: var(--amber); }
-
-    /* Miembro que ya no participa: color apagado y foto en gris */
-    .perfil-4 {
-      --c: var(--muted);
-      opacity: 0.5;
-    }
-
-    .perfil-4 .perfil-foto {
-      filter: grayscale(1);
-    }
-
-    .perfil-4:hover,
-    .perfil-4:focus-within {
-      opacity: 0.8;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .perfil {
-        transition: none;
-      }
-
-      .perfil:hover,
-      .perfil:focus-within {
-        transform: none;
-      }
-    }
-  </style>
+  
 </head>
 
 <body>
@@ -150,8 +20,8 @@
         <article class="perfil perfil-1">
           <img class="perfil-foto" src="https://lh3.googleusercontent.com/a/ACg8ocJD4jbSFCfs11r5Wj2yxber8shXjMrPpYM-k_jzwbBT7MkksgM" alt="Foto de Kiran Shahzadi" />
           <div class="perfil-datos">
-            <h3 class="perfil-nombre">Kiran Shahzadi</h3>
-            <a class="perfil-url" href="https://github.com/ks807" target="_blank" rel="noopener">github.com/ks807</a>
+            <h3 class="perfil-nombre">Kiran</h3>
+            <a class="perfil-url" href="https://github.com/ks807" target="_blank" rel="noopener">github.com/kiran</a>
             <p class="perfil-info">
               Miembro del Grupo 3. Cambia este texto por su parte en el proyecto.
             </p>
@@ -161,8 +31,8 @@
         <article class="perfil perfil-2">
           <img class="perfil-foto" src="https://lh3.googleusercontent.com/a-/ALV-UjWJXTo96M6jhuvkwR2lMufp1pO0J4WVWH4OPN9B80mdZ5-X1kw" alt="Foto de Nombre 2" />
           <div class="perfil-datos">
-            <h3 class="perfil-nombre">Nombre 2</h3>
-            <a class="perfil-url" href="https://github.com/USUARIO2" target="_blank" rel="noopener">github.com/usuario2</a>
+            <h3 class="perfil-nombre">Goar</h3>
+            <a class="perfil-url" href="https://github.com/GoarB" target="_blank" rel="noopener">github.com/goar</a>
             <p class="perfil-info">
               Miembro del Grupo 3. Cambia este texto por su parte en el proyecto.
             </p>
@@ -170,10 +40,10 @@
         </article>
 
         <article class="perfil perfil-3">
-          <img class="perfil-foto" src="assets/media/goarb.jpg" alt="Foto de Goar Bosque" />
+          <img class="perfil-foto" src="assets/media/hicham.jpg" alt="Foto de Hicham" />
           <div class="perfil-datos">
-            <h3 class="perfil-nombre">Goar Bosque</h3>
-            <a class="perfil-url" href="https://github.com/GoarB" target="_blank" rel="noopener">github.com/GoarB</a>
+            <h3 class="perfil-nombre">Hicham</h3>
+            <a class="perfil-url" href="https://github.com/kam-ham" target="_blank" rel="noopener">github.com/Hicham</a>
             <p class="perfil-info">
               Miembro del Grupo 3. Cambia este texto por su parte en el proyecto.
             </p>
