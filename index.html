@@ -1,5 +1,275 @@
 <!DOCTYPE html>
 <html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Terminal / Perfil</title>
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <style>
+    /* Enlace que parece texto normal: sin subrayado ni color de enlace */
+    .card-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Toda la tarjeta es clicable */
+    .identity-panel {
+      position: relative;
+      transition: border-color 0.2s ease;
+    }
+
+    .identity-panel:hover {
+      border-color: var(--green-dark);
+    }
+
+    .card-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    .card-link:focus-visible {
+      outline: none;
+    }
+
+    .card-link:focus-visible::after {
+      outline: 2px solid var(--cyan);
+      outline-offset: -2px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="terminal-nav-large" aria-label="Navegación principal">
+    <a href="#" class="nav-logo-large">[G3_SYSTEM_CONTROL]</a>
+    <ul class="nav-links-large">
+      <li><a href="index.html">&gt;_ Inicio</a></li>
+      <li><a href="materia.html">&gt;_Material </a></li>
+
+      <!-- Element amb desplegable -->
+      <li class="nav-item-dropdown">
+        <a href="#" id="dropdown-trigger" onclick="toggleDropdown(event)">&gt;_ Workshop▼</a>
+
+        <!-- Secció desplegable amagada -->
+        <div id="terminal-dropdown" class="dropdown-section">
+          <ul class="dropdown-menu-list">
+            <li><a href="pagina1.html">WS1</a></li>
+            <li><a href="pagina2.html">WS2</a></li>
+            <li><a href="pagina3.html">WS3</a></li>
+            <li><a href="pagina4.html">WS4</a></li>
+            <li><a href="pagina5.html">WS5</a></li>
+            <li><a href="pagina6.html">WS6</a></li>
+            <li><a href="pagina7.html">WS7</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+
+  <main class="terminal-shell">
+    <div class="terminal-frame">
+      <header class="topbar">
+        <div class="brand">STUDENT_TERMINAL / PERFIL</div>
+        <div class="session">
+          sesión activa · <strong>martes 14 mayo 2024 / 09:41</strong>
+        </div>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <h1 id="page-title">
+            BIENVENIDOS A LA WS DEL <span>GRUPO 3</span>.<br />
+            <span class="caret" aria-hidden="true"></span>
+          </h1>
+        </div>
+
+
+            <section class="ws-section" id="perfiles" aria-labelledby="perfiles-title">
+      <h2 class="recursos-title" id="perfiles-title">PERFILES_GITHUB</h2>
+
+      <div class="perfiles-grid">
+        <!-- CAMBIA en cada tarjeta: foto, nombre, enlace y texto de información -->
+
+        <article class="perfil perfil-1">
+          <img class="perfil-foto" src="https://lh3.googleusercontent.com/a/ACg8ocJD4jbSFCfs11r5Wj2yxber8shXjMrPpYM-k_jzwbBT7MkksgM" alt="Foto de Kiran Shahzadi" />
+          <div class="perfil-datos">
+            <h3 class="perfil-nombre">Kiran</h3>
+            <a class="perfil-url" href="https://github.com/ks807" target="_blank" rel="noopener">github.com/kiran</a>
+            <p class="perfil-info">
+              Miembro del Grupo 3. Cambia este texto por su parte en el proyecto.
+            </p>
+          </div>
+        </article>
+
+        <article class="perfil perfil-2">
+          <img class="perfil-foto" src="https://lh3.googleusercontent.com/a-/ALV-UjWJXTo96M6jhuvkwR2lMufp1pO0J4WVWH4OPN9B80mdZ5-X1kw" alt="Foto de Nombre 2" />
+          <div class="perfil-datos">
+            <h3 class="perfil-nombre">Goar</h3>
+            <a class="perfil-url" href="https://github.com/GoarB" target="_blank" rel="noopener">github.com/goar</a>
+            <p class="perfil-info">
+              Miembro del Grupo 3. Cambia este texto por su parte en el proyecto.
+            </p>
+          </div>
+        </article>
+
+        <article class="perfil perfil-3">
+          <img class="perfil-foto" src="assets/media/hicham.jpg" alt="Foto de Hicham" />
+          <div class="perfil-datos">
+            <h3 class="perfil-nombre">Hicham</h3>
+            <a class="perfil-url" href="https://github.com/kam-ham" target="_blank" rel="noopener">github.com/Hicham</a>
+            <p class="perfil-info">
+              Miembro del Grupo 3. Cambia este texto por su parte en el proyecto.
+            </p>
+          </div>
+        </article>
+
+        <article class="perfil perfil-4">
+          <img class="perfil-foto" src="assets/media/miembro4.jpg" alt="Foto de Nombre 4" />
+          <div class="perfil-datos">
+            <h3 class="perfil-nombre">Nombre 4</h3>
+            <a class="perfil-url" href="https://github.com/USUARIO4" target="_blank" rel="noopener">github.com/usuario4</a>
+            <p class="perfil-info">
+              Estuvo en el grupo al principio, pero ya no participa.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+      </section>
+
+      <div class="WS">
+        
+        <!-- WS_01 -->
+        <section class="overview" aria-label="WS_01 Sistema Operativo">
+          <article class="panel identity-panel">
+            <div class="monogram" aria-hidden="true">OS</div>
+            <div class="identity">
+              <a class="card-link" href="pagina1.html">
+                <h2>WS_01</h2>
+                <p>Sistema Operativo</p>
+              </a>
+              <div class="chips">
+                <span class="chip">Presentacion</span>
+                <span class="chip">Practicas</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- WS_02 -->
+        <section class="overview" aria-label="WS_02 Control de versions">
+          <article class="panel identity-panel">
+            <div class="monogram" aria-hidden="true">.git</div>
+            <div class="identity">
+              <a class="card-link" href="pagina2.html">
+                <h2>WS_02</h2>
+                <p>Control de versions</p>
+              </a>
+              <div class="chips">
+                <span class="chip">Presentacion</span>
+                <span class="chip">Practicas</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- WS_03 -->
+        <section class="overview" aria-label="WS_03 Programacion">
+          <article class="panel identity-panel">
+            <div class="monogram" aria-hidden="true">kotlin</div>
+            <div class="identity">
+              <a class="card-link" href="pagina3.html">
+                <h2>WS_03</h2>
+                <p>Programacion</p>
+              </a>
+              <div class="chips">
+                <span class="chip">Presentacion</span>
+                <span class="chip">Practicas</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- WS_04 -->
+        <section class="overview" aria-label="WS_04 Bases de Datos">
+          <article class="panel identity-panel">
+            <div class="monogram" aria-hidden="true">BD</div>
+            <div class="identity">
+              <a class="card-link" href="pagina4.html">
+                <h2>WS_04</h2>
+                <p>Bases de Datos</p>
+              </a>
+              <div class="chips">
+                <span class="chip">Presentacion</span>
+                <span class="chip">Practicas</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- WS_05 -->
+        <section class="overview" aria-label="WS_05 Diseño de interfaces">
+          <article class="panel identity-panel">
+            <div class="monogram" aria-hidden="true">UI/UX</div>
+            <div class="identity">
+              <a class="card-link" href="pagina5.html">
+                <h2>WS_05</h2>
+                <p>Diseño de interfaces</p>
+              </a>
+              <div class="chips">
+                <span class="chip">Presentacion</span>
+                <span class="chip">Practicas</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- WS_06 -->
+        <section class="overview" aria-label="WS_06 Inteligencia Artificial">
+          <article class="panel identity-panel">
+            <div class="monogram" aria-hidden="true">AI</div>
+            <div class="identity">
+              <a class="card-link" href="pagina6.html">
+                <h2>WS_06</h2>
+                <p>Inteligencia Artificial</p>
+              </a>
+              <div class="chips">
+                <span class="chip">Presentacion</span>
+                <span class="chip">Practicas</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- WS_07 (nuevo) -->
+        <section class="overview" aria-label="WS_07 Infraestructura Cloud">
+          <article class="panel identity-panel">
+            <div class="monogram" aria-hidden="true">IoT</div>
+            <div class="identity">
+              <a class="card-link" href="pagina7.html">
+                <h2>WS_07</h2>
+                <p>Infraestructura Cloud</p>
+              </a>
+              <div class="chips">
+                <span class="chip">Presentacion</span>
+                <span class="chip">Practicas</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+
+<script src="src/script.js"></script>
+
+</body>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

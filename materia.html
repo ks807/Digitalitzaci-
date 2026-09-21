@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recursos · Grupo 3</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/ws.css" />
+</head>
+
+<body>
+  <nav class="terminal-nav-large" aria-label="Navegación principal">
+    <a href="#" class="nav-logo-large">[G3_SYSTEM_CONTROL]</a>
+    <ul class="nav-links-large">
+      <li><a href="index.html">&gt;_ Inicio</a></li>
+      <li><a href="materia.html">&gt;_ Material</a></li>
+
+      <!-- Element amb desplegable -->
+      <li class="nav-item-dropdown">
+        <a href="#" id="dropdown-trigger">&gt;_ Workshop ▼</a>
+
+        <!-- Secció desplegable amagada -->
+        <div id="terminal-dropdown" class="dropdown-section">
+          <ul class="dropdown-menu-list">
+            <li><a href="pagina1.html">WS1</a></li>
+            <li><a href="pagina2.html">WS2</a></li>
+            <li><a href="pagina3.html">WS3</a></li>
+            <li><a href="pagina4.html">WS4</a></li>
+            <li><a href="pagina5.html">WS5</a></li>
+            <li><a href="pagina6.html">WS6</a></li>
+            <li><a href="pagina7.html">WS7</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="terminal-shell">
+    <div class="terminal-frame">
+      <header class="topbar">
+        <div class="brand">STUDENT_TERMINAL / RECURSOS</div>
+        <div class="session">sesión activa · <strong>Grupo 3 / Todos los WS</strong></div>
+      </header>
+
+      <section class="hero ws-hero" aria-labelledby="page-title">
+        <div>
+          <h1 id="page-title">
+            RECURSOS<br />
+            <span>DEL GRUPO 3</span><span class="caret" aria-hidden="true"></span>
+          </h1>
+          <p class="ws-lead">
+            Todas las presentaciones, materiales y prácticas de los siete WS
+            en un solo sitio.
+          </p>
+          <div class="chips" style="margin-top: 24px;">
+            <span class="chip">17 materiales</span>
+            <span class="chip">11 prácticas</span>
+            <span class="chip">9 completadas</span>
+            <span class="chip">2 pendientes</span>
+          </div>
+
+          <!-- Filtros -->
+          <div class="ws-actions">
+            <a class="btn btn-solid" href="#" data-filtro="todo" aria-pressed="true">Todo</a>
+            <a class="btn" href="#" data-filtro="material" aria-pressed="false">Material y presentaciones</a>
+            <a class="btn" href="#" data-filtro="practica" aria-pressed="false">Prácticas</a>
+          </div>
+        </div>
+      </section>
+
+      <div id="lista">
+
+        <!-- ========== WS1 ========== -->
+        <section class="ws-section" id="ws1">
+          <article class="panel">
+            <p class="recursos-title">WORKSHOP_01 · COMPLETADO</p>
+            <div class="identity">
+              <h2>Sistemes Operatius</h2>
+              <p>Introducción a los sistemas operativos, terminal de Windows y Linux, rutas, máquinas virtuales y redes.</p>
+            </div>
+            <div class="chips">
+              <span class="chip">3 material</span>
+              <span class="chip">1 práctica</span>
+            </div>
+
+            <div class="recurso-list">
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://docs.google.com/presentation/d/1soLC_Z7iEk9m_8K1yhB_1mrjK8HzdbsS9AzNVRwKyT0/edit?usp=classroom_web&amp;authuser=0">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">WS1 - D01-Introducció als Sistemes Operatius</span>
+                  <span class="recurso-meta">Material · Publicat el dia 15 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://drive.google.com/file/d/1EyIguiAMavNWvRctNb_KGflqWSpG48jb/view?usp=classroom_web&amp;authuser=0">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">Windows command line cheatsheet</span>
+                  <span class="recurso-meta">Material · Publicat el dia 15 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODc4NTEzOTEzMDkz/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">Linux command line cheatsheet (terminal)</span>
+                  <span class="recurso-meta">Material · Publicat el dia 15 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="practica" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/a/ODc4NTEwMDE5OTE1/details">
+                <span class="recurso-tag">[DONE]</span>
+                <span>
+                  <span class="recurso-title">WS1 - A01-Sistemes Operatius</span>
+                  <span class="recurso-meta">Completada · Data de venciment: 18 de set. 23:59</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="ws-actions">
+              <a class="btn" href="/Digitalitzaci-/pagina1.html">Abrir WS_01</a>
+            </div>
+          </article>
+        </section>
+
+        <!-- ========== WS2 ========== -->
+        <section class="ws-section" id="ws2">
+          <article class="panel">
+            <p class="recursos-title">WORKSHOP_02 · COMPLETADO</p>
+            <div class="identity">
+              <h2>Control de versions</h2>
+              <p>Historia del control de versiones, historial de Google Docs, Git y GitHub.</p>
+            </div>
+            <div class="chips">
+              <span class="chip">3 material</span>
+              <span class="chip">3 prácticas</span>
+            </div>
+
+            <div class="recurso-list">
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODc4NTAxOTE1NjAz/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">WS2 - D01-L'origen i evolució del control de versions</span>
+                  <span class="recurso-meta">Material · Darrera modificació: 17 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODI2MjczMzM5OTUx/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">WS2 - D02-Control de versions a Google Docs</span>
+                  <span class="recurso-meta">Material · Publicat el dia 17 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODc4NTAwNzkzNjQz/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">WS2 - D03-Git i GitHub: què són i com funcionen?</span>
+                  <span class="recurso-meta">Material · Publicat el dia 17 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="practica" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/a/ODI2MjczNDA4MDYx/details">
+                <span class="recurso-tag">[DONE]</span>
+                <span>
+                  <span class="recurso-title">WS2 - A01-Conte inacabat</span>
+                  <span class="recurso-meta">Completada · Data de venciment: 18 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="practica" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/a/ODg1NTE3OTA1NjA2/details">
+                <span class="recurso-tag">[DONE]</span>
+                <span>
+                  <span class="recurso-title">WS2 - A02-Perfil a GitHub</span>
+                  <span class="recurso-meta">Completada · Data de venciment: 18 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="practica" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/a/ODI2MjczMTk1NzI5/details">
+                <span class="recurso-tag">[DONE]</span>
+                <span>
+                  <span class="recurso-title">WS2 - A03-Què hem après?</span>
+                  <span class="recurso-meta">Completada · Data de venciment: 18 de set.</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="ws-actions">
+              <a class="btn" href="/Digitalitzaci-/pagina2.html">Abrir WS_02</a>
+            </div>
+          </article>
+        </section>
+
+        <!-- ========== WS3 ========== -->
+        <section class="ws-section" id="ws3">
+          <article class="panel">
+            <p class="recursos-title">WORKSHOP_03 · COMPLETADO</p>
+            <div class="identity">
+              <h2>Programació</h2>
+              <p>Primeros pasos en Kotlin: entrada y salida, variables, operaciones y condicionales.</p>
+            </div>
+            <div class="chips">
+              <span class="chip">4 material</span>
+              <span class="chip">3 prácticas</span>
+            </div>
+
+            <div class="recurso-list">
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODc4MjAyNjA4NDM2/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">Introducció</span>
+                  <span class="recurso-meta">Material · Publicat el dia 17 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODc4MjAyMzY2Mjk4/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">Plotter</span>
+                  <span class="recurso-meta">Material · Publicat el dia 17 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODc4MjAxNjQ2ODQ2/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">Entrada i sortida</span>
+                  <span class="recurso-meta">Material · Publicat el dia 17 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODc4MjA0MjA2NDk4/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">Condicionals</span>
+                  <span class="recurso-meta">Material · Publicat el dia 17 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="practica" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/a/ODc4MjAyMDgwMDgy/details">
+                <span class="recurso-tag">[DONE]</span>
+                <span>
+                  <span class="recurso-title">WS3 - Activitat 1 - "Hello alumne"</span>
+                  <span class="recurso-meta">Completada · Sense data de venciment</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="practica" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/a/ODc4MjAzNTUzNDgz/details">
+                <span class="recurso-tag">[DONE]</span>
+                <span>
+                  <span class="recurso-title">WS3 - Activitat 2 - Operar amb dades</span>
+                  <span class="recurso-meta">Completada · Sense data de venciment</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="practica" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/a/ODc4MjAzNDgyNTg2/details">
+                <span class="recurso-tag">[DONE]</span>
+                <span>
+                  <span class="recurso-title">WS3 - Activitat 3 - Calculadora</span>
+                  <span class="recurso-meta">Completada · Sense data de venciment</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="ws-actions">
+              <a class="btn" href="/Digitalitzaci-/pagina3.html">Abrir WS_03</a>
+            </div>
+          </article>
+        </section>
+
+        <!-- ========== WS4 ========== -->
+        <section class="ws-section" id="ws4">
+          <article class="panel">
+            <p class="recursos-title">WORKSHOP_04 · PENDIENTE</p>
+            <div class="identity">
+              <h2>Bases de Dades</h2>
+              <p>Introducción a las bases de datos, ficheros SQL y trabajo con DataGrip.</p>
+            </div>
+            <div class="chips">
+              <span class="chip">3 material</span>
+              <span class="chip">1 práctica pendiente</span>
+            </div>
+
+            <div class="recurso-list">
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODg0Nzg5NjM4MTgz/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">WS4 - Introducció a les Bases de Dades</span>
+                  <span class="recurso-meta">Material · Publicat el dia 15 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODg0ODA1OTY0Mzcw/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">Fitxers SQL</span>
+                  <span class="recurso-meta">Material · Publicat el dia 15 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODg0ODA0MjQzODUw/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">DataGrip Portable Linux</span>
+                  <span class="recurso-meta">Material · Publicat el dia 15 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="practica" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/a/ODg0ODA4MzMzNTgy/details">
+                <span class="recurso-tag todo">[TODO]</span>
+                <span>
+                  <span class="recurso-title">WS4 - Activitat 1 - Projecte en grup</span>
+                  <span class="recurso-meta pendiente">Tasca · Data de venciment: Demà 14:00</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="ws-actions">
+              <a class="btn" href="/Digitalitzaci-/pagina4.html">Abrir WS_04</a>
+            </div>
+          </article>
+        </section>
+
+        <!-- ========== WS5 ========== -->
+        <section class="ws-section" id="ws5">
+          <article class="panel">
+            <p class="recursos-title">WORKSHOP_05 · COMPLETADO</p>
+            <div class="identity">
+              <h2>Disseny d'interfícies</h2>
+              <p>Usabilidad y experiencia de usuario, arquitectura web y análisis de un sitio real.</p>
+            </div>
+            <div class="chips">
+              <span class="chip">1 material</span>
+              <span class="chip">1 práctica</span>
+            </div>
+
+            <div class="recurso-list">
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODg0MjIxMTkxMTE5/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">Workshop 5 Disseny d'Interfícies</span>
+                  <span class="recurso-meta">Material · Publicat el dia 16 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="practica" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/a/ODI2MzAwNzA1NTQw/details">
+                <span class="recurso-tag">[DONE]</span>
+                <span>
+                  <span class="recurso-title">WS5 - Lliurament de l'informe</span>
+                  <span class="recurso-meta">Completada · Data de venciment: 23:59</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="ws-actions">
+              <a class="btn" href="/Digitalitzaci-/pagina5.html">Abrir WS_05</a>
+            </div>
+          </article>
+        </section>
+
+        <!-- ========== WS6 ========== -->
+        <section class="ws-section" id="ws6">
+          <article class="panel">
+            <p class="recursos-title">WORKSHOP_06 · PENDIENTE</p>
+            <div class="identity">
+              <h2>Intel·ligència Artificial</h2>
+              <p>IA generativa, prompts, agentes con n8n y normativa europea sobre IA.</p>
+            </div>
+            <div class="chips">
+              <span class="chip">2 material</span>
+              <span class="chip">1 práctica pendiente</span>
+            </div>
+
+            <div class="recurso-list">
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODg1MzExNTM1Mjc0/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">WS6 - Intel·ligència Artificial</span>
+                  <span class="recurso-meta">Material · Publicat el dia 16 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODg1NzY0NzYyMDQ1/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">WS6 - Referències</span>
+                  <span class="recurso-meta">Material · Publicat el dia 17 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="practica" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/a/ODg1MzEzNDYwODc0/details">
+                <span class="recurso-tag todo">[TODO]</span>
+                <span>
+                  <span class="recurso-title">WS6 - Tasca</span>
+                  <span class="recurso-meta pendiente">Tasca · Data de venciment: Demà 14:00</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="ws-actions">
+              <a class="btn" href="/Digitalitzaci-/pagina6.html">Abrir WS_06</a>
+            </div>
+          </article>
+        </section>
+
+        <!-- ========== WS7 ========== -->
+        <section class="ws-section" id="ws7">
+          <article class="panel">
+            <p class="recursos-title">WORKSHOP_07 · COMPLETADO</p>
+            <div class="identity">
+              <h2>IT / IoT</h2>
+              <p>Infraestructura cloud para desarrolladores: modelos de servicio, arquitectura en capas y APIs REST.</p>
+            </div>
+            <div class="chips">
+              <span class="chip">1 material</span>
+              <span class="chip">1 práctica</span>
+            </div>
+
+            <div class="recurso-list">
+              <a class="recurso" data-tipo="material" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/m/ODc4NTE0NTI0NDMx/details">
+                <span class="recurso-tag">[BOOK]</span>
+                <span>
+                  <span class="recurso-title">WS7 - D01-Infraestructures cloud</span>
+                  <span class="recurso-meta">Material · Publicat el dia 18 de set.</span>
+                </span>
+              </a>
+              <a class="recurso" data-tipo="practica" target="_blank" rel="noopener"
+                href="https://classroom.google.com/c/ODcxMjkyMzE2NjQ0/a/ODc4NTEzMDIzMzg2/details">
+                <span class="recurso-tag">[DONE]</span>
+                <span>
+                  <span class="recurso-title">WS7 - A01-Activitat A1</span>
+                  <span class="recurso-meta">Completada · Data de venciment: 18 de set. 23:59</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="ws-actions">
+              <a class="btn" href="/Digitalitzaci-/pagina7.html">Abrir WS_07</a>
+            </div>
+          </article>
+        </section>
+
+      </div>
+
+      <footer class="statusbar ws-footer">
+        <span><strong>RECURSOS</strong> · Grupo 3</span>
+        <div class="status-right">
+          <span>17 materiales</span>
+          <span>11 prácticas</span>
+          <a class="btn" href="index.html">← Volver a los WS</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    // Filtros: Todo / Material / Prácticas
+    const botones = document.querySelectorAll("[data-filtro]");
+    const filas = document.querySelectorAll(".recurso");
+    const bloques = document.querySelectorAll("#lista .ws-section");
+
+    botones.forEach((boton) => {
+      boton.addEventListener("click", (e) => {
+        e.preventDefault();
+        const filtro = boton.dataset.filtro;
+
+        // El botón activo se ve relleno (usa la clase btn-solid que ya existe)
+        botones.forEach((b) => {
+          b.classList.toggle("btn-solid", b === boton);
+          b.setAttribute("aria-pressed", b === boton);
+        });
+
+        filas.forEach((fila) => {
+          const mostrar = filtro === "todo" || fila.dataset.tipo === filtro;
+          fila.style.display = mostrar ? "" : "none";
+        });
+
+        // Oculta los paneles que se quedan sin filas
+        bloques.forEach((bloque) => {
+          const hayFilas = [...bloque.querySelectorAll(".recurso")]
+            .some((fila) => fila.style.display !== "none");
+          bloque.style.display = hayFilas ? "" : "none";
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
